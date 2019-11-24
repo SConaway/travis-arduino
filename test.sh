@@ -4,7 +4,7 @@ arduino-cli core update-index
 arduino-cli lib update-index
 arduino-cli lib install "Adafruit SleepyDog Library"
 
-cd /sketches
+cd sketches
 
 for D in *; do
     if [ -d "${D}" ]; then
