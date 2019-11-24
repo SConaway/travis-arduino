@@ -6,7 +6,7 @@ mkdir -p ~/bin
 
 curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | BINDIR=~/bin sh
 
-cat <<EOF >~/arduino-cli.json
+cat <<EOF >~/arduino-cli.yaml
 proxy_type: auto
 board_manager:
     additional_urls:
