@@ -10,4 +10,4 @@ jobs:
           dist: bionic
         - os: osx
 
-script: ./travis.sh
+script: ./travis.sh && ./test.sh
