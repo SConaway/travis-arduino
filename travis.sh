@@ -15,6 +15,10 @@ board_manager:
         - https://dl.espressif.com/dl/package_esp32_index.json
 EOF
 
+mkdir -p /home/travis/.arduino15/packages
+mkdir -p /home/travis/.arduino15/staging
+mkdir -p /home/travis/.arduino15/tmp
+
 arduino-cli version
 
 arduino-cli config dump
