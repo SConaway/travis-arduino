@@ -21,11 +21,6 @@ arduino-cli version
 arduino-cli config dump
 
 arduino-cli core update-index
-arduino-cli core install arduino:avr adafruit:avr adafruit:samd arduino:megaavr arduino:samd esp8266:esp8266 esp32:esp32 STM32:stm32
-
-if [[ $? -ne 0 ]]; then
-echo "Something failed; trying again..."
-arduino-cli core install arduino:avr adafruit:avr adafruit:samd arduino:megaavr arduino:samd esp8266:esp8266 esp32:esp32 STM32:stm32
-fi
+arduino-cli core install arduino:avr adafruit:avr adafruit:samd arduino:megaavr arduino:samd esp8266:esp8266 esp32:esp32 STM32:stm32 || arduino-cli core install arduino:avr adafruit:avr adafruit:samd arduino:megaavr arduino:samd esp8266:esp8266 esp32:esp32 STM32:stm32
 
 arduino-cli lib update-index
