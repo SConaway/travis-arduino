@@ -13,6 +13,7 @@ board_manager:
         - http://arduino.esp8266.com/stable/package_esp8266com_index.json
         - https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
         - https://dl.espressif.com/dl/package_esp32_index.json
+        - http://dan.drown.org/stm32duino/package_STM32duino_index.json
 EOF
 
 arduino-cli version
@@ -20,11 +21,11 @@ arduino-cli version
 arduino-cli config dump
 
 arduino-cli core update-index
-arduino-cli core install arduino:avr adafruit:avr adafruit:samd arduino:megaavr arduino:samd esp8266:esp8266 esp32:esp32
+arduino-cli core install arduino:avr adafruit:avr adafruit:samd arduino:megaavr arduino:samd esp8266:esp8266 esp32:esp32 STM32:stm32
 
 if [[ $? -ne 0 ]]; then
 echo "Something failed; trying again..."
-arduino-cli core install arduino:avr adafruit:avr adafruit:samd arduino:megaavr arduino:samd esp8266:esp8266 esp32:esp32
+arduino-cli core install arduino:avr adafruit:avr adafruit:samd arduino:megaavr arduino:samd esp8266:esp8266 esp32:esp32 STM32:stm32
 fi
 
 arduino-cli lib update-index
