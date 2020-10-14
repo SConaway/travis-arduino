@@ -10,10 +10,10 @@ cat <<EOF >~/arduino-cli.yaml
 proxy_type: auto
 board_manager:
     additional_urls:
-        - http://arduino.esp8266.com/stable/package_esp8266com_index.json
+        - https://arduino.esp8266.com/stable/package_esp8266com_index.json
         - https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
         - https://dl.espressif.com/dl/package_esp32_index.json
-        - http://dan.drown.org/stm32duino/package_STM32duino_index.json
+        - https://dan.drown.org/stm32duino/package_STM32duino_index.json
 EOF
 
 arduino-cli version
