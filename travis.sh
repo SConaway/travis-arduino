@@ -21,6 +21,12 @@ arduino-cli version
 arduino-cli config dump
 
 arduino-cli core update-index
-arduino-cli core install arduino:avr adafruit:avr adafruit:samd arduino:megaavr arduino:samd esp8266:esp8266 esp32:esp32 STM32:stm32 || arduino-cli core install arduino:avr adafruit:avr adafruit:samd arduino:megaavr arduino:samd esp8266:esp8266 esp32:esp32 STM32:stm32
+
+CORES_TO_INSTALL = ('arduino:avr' 'adafruit:avr' 'adafruit:samd' 'arduino:megaavr' 'arduino:samd' 'esp8266:esp8266' 'esp32:esp32' 'STM32:stm32')
+for core in "${CORES_TO_INSTALL[@]}"
+do
+  echo "Installing $core, please wait ..."
+  arduino-cli core install $core || (echo "That failed, trying again..." && arduino-cli core install $core)
+done
 
 arduino-cli lib update-index
