@@ -13,7 +13,7 @@ board_manager:
         - https://arduino.esp8266.com/stable/package_esp8266com_index.json
         - https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
         - https://dl.espressif.com/dl/package_esp32_index.json
-        - https://dan.drown.org/stm32duino/package_STM32duino_index.json
+        - https://raw.githubusercontent.com/stm32duino/BoardManagerFiles/master/STM32/package_stm_index.json
 EOF
 
 arduino-cli version
