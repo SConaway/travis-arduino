@@ -1,4 +1,4 @@
-language: minimal
+language: shell
 
 jobs:
     include:
@@ -8,6 +8,19 @@ jobs:
           dist: xenial
         - os: linux
           dist: bionic
+        - os: linux
+          dist: focal
         - os: osx
+          osx_image: xcode9.4   # 10.13
+        - os: osx
+          osx_image: xcode10.3  # 10.14.4
+        - os: osx
+          osx_image: xcode11.3  # 10.14.6
+        - os: osx
+          osx_image: xcode11.6  # 10.15.6
+        - os: osx
+          osx_image: xcode12    # 10.15.7
 
-script: ./travis.sh && ./test.sh
+script: 
+    - ./travis.sh
+    - ./test.sh
